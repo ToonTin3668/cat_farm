@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://c31y1qhjx8kj"]
+
+[ext_resource type="PackedScene" uid="uid://okmh780syxso" path="res://worlds/test_world.tscn" id="1_d1nh1"]
+[ext_resource type="PackedScene" uid="uid://bg2d6t3kra8e0" path="res://sprites/player.tscn" id="2_olvqh"]
+[ext_resource type="PackedScene" uid="uid://b7lihxxibyvep" path="res://sprites/tree.tscn" id="3_gqur6"]
+[ext_resource type="PackedScene" uid="uid://cphculm3htywu" path="res://sprites/mushroom.tscn" id="4_i6hn8"]
+
+[node name="Node2D" type="Node2D"]
+y_sort_enabled = true
+
+[node name="TileMap" parent="." instance=ExtResource("1_d1nh1")]
+
+[node name="CharacterBody2D" parent="." instance=ExtResource("2_olvqh")]
+position = Vector2(192, 139)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+zoom = Vector2(3.725, 3.725)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("3_gqur6")]
+position = Vector2(139, 143)
+
+[node name="StaticBody2D2" parent="." instance=ExtResource("3_gqur6")]
+position = Vector2(253, 176)
+
+[node name="StaticBody2D3" parent="." instance=ExtResource("3_gqur6")]
+position = Vector2(81, 191)
+
+[node name="StaticBody2D4" parent="." instance=ExtResource("3_gqur6")]
+position = Vector2(181, 190)
+
+[node name="StaticBody2D5" parent="." instance=ExtResource("4_i6hn8")]
+position = Vector2(213, 147)

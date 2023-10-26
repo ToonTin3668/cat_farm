@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cphculm3htywu"]
+
+[ext_resource type="Texture2D" uid="uid://bn2rueo0o88qo" path="res://assets/sprites/Objects/Mushrooms, Flowers, Stones.png" id="1_wc011"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l6mfp"]
+size = Vector2(20, 11)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_wc011")
+region_enabled = true
+region_rect = Rect2(101, 27, 22, 19)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 2.5)
+shape = SubResource("RectangleShape2D_l6mfp")
