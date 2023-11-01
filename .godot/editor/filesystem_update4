@@ -1,7 +1,3 @@
 res://sprites/player.tscn
 res://code/PlayerScript.gd
 res://worlds/testing level.tscn
-res://worlds/test_world.tscn
-res://sprites/tree.tscn
-res://sprites/mushroom.tscn
-res://sprites/cow.tscn
