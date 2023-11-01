@@ -8,8 +8,8 @@ var size := Vector2(20, 20)
 # The size of a cell in pixels.
 var cell_size := Vector2(16, 16)
 
-@onready var animated_sprite = $AnimatedSprite2D
-@onready var placer = $placer
+@onready var animated_sprite = $AnimationTree["parameters/playback"]
+@onready var placer = $Sprite2D/placer
 
 func _physics_process(_delta):
 	var input_dir:Vector2 = input()
@@ -48,22 +48,22 @@ func move():
 
 func animate(direction, mouse):
 	if direction.x == 1:
-		animated_sprite.play("walking_right")
+		animated_sprite.travel("walk_right")
 	elif direction.x == -1:
-		animated_sprite.play("walking_left")
+		animated_sprite.travel("walk_left")
 	elif direction.y == -1:
-		animated_sprite.play("walking_forward")
+		animated_sprite.travel("walk_forward")
 	elif direction.y == 1:
-		animated_sprite.play("walking_backwards")
+		animated_sprite.travel("walk_back")
 	else:
 		if mouse.x > 5:
-			animated_sprite.play("idle_right")
+			animated_sprite.travel("idle_right")
 		elif mouse.x < -5:
-			animated_sprite.play("idle_left")
+			animated_sprite.travel("idle_left")
 		elif mouse.y > 5:
-			animated_sprite.play("idle_backwards")
+			animated_sprite.travel("idle_forward")
 		elif mouse.y < -5:
-			animated_sprite.play("idle_forwards")
+			animated_sprite.travel("idle_backward")
 
 func mousePos() -> Vector2:
 	var mouse_pos = Vector2.ZERO

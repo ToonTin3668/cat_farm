@@ -24,7 +24,7 @@ mouse_cursor/custom_image="res://assets/UI/Sprite sheets/Mouse sprites/Triangle 
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/git/plugin.cfg")
+enabled=PackedStringArray()
 
 [input]
 
